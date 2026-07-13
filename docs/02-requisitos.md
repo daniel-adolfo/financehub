@@ -10,7 +10,7 @@ Este documento tem como objetivo especificar os requisitos funcionais e não fun
 
 O FinanceHub é uma aplicação web desenvolvida para auxiliar usuários no controle de suas finanças pessoais. O sistema permitirá registrar receitas, despesas, contas bancárias, cartões de crédito, categorias e metas financeiras, além de disponibilizar dashboards e relatórios que facilitem o acompanhamento da situação financeira.
 
-O sistema contará com autenticação de usuários, garantindo que cada pessoa tenha acesso apenas às suas próprias informações. A aplicação será desenvolvida utilizando uma arquitetura moderna, com backend em Spring Boot, frontend em React e banco de dados MySQL.
+O sistema contará com autenticação de usuários, garantindo que cada pessoa tenha acesso apenas às suas próprias informações. A aplicação será desenvolvida utilizando uma arquitetura moderna, com backend em Spring Boot, frontend em React e banco de dados PostgreSQL.
 
 ### 1.3 Definições
 
