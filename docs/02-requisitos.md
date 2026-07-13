@@ -1,439 +1,113 @@
 # Requisitos do Sistema
 
-## Objetivo
+## 1. Introdução
 
-Este documento descreve os requisitos funcionais e não funcionais do FinanceHub.
+### 1.1 Objetivo
 
-Os requisitos definidos servirão como base para a modelagem do banco de dados, desenvolvimento do backend, frontend e testes do sistema.
+Este documento tem como objetivo especificar os requisitos funcionais e não funcionais do **FinanceHub**, um sistema web para gerenciamento financeiro pessoal. A documentação servirá como referência para o desenvolvimento, testes e manutenção da aplicação, garantindo que todas as funcionalidades sejam implementadas de forma consistente e alinhadas aos objetivos do projeto.
 
----
+### 1.2 Escopo
 
-# Requisitos Funcionais
+O FinanceHub é uma aplicação web desenvolvida para auxiliar usuários no controle de suas finanças pessoais. O sistema permitirá registrar receitas, despesas, contas bancárias, cartões de crédito, categorias e metas financeiras, além de disponibilizar dashboards e relatórios que facilitem o acompanhamento da situação financeira.
 
-## Módulo: Autenticação
+O sistema contará com autenticação de usuários, garantindo que cada pessoa tenha acesso apenas às suas próprias informações. A aplicação será desenvolvida utilizando uma arquitetura moderna, com backend em Spring Boot, frontend em React e banco de dados MySQL.
 
-### RF001 - Cadastro de Usuário
+### 1.3 Definições
+
+| Termo           | Definição                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| Usuário         | Pessoa cadastrada no sistema que utiliza o FinanceHub para controlar suas finanças.        |
+| Receita         | Qualquer entrada de dinheiro registrada pelo usuário.                                      |
+| Despesa         | Qualquer saída de dinheiro registrada pelo usuário.                                        |
+| Categoria       | Classificação utilizada para organizar receitas e despesas.                                |
+| Conta           | Conta bancária, carteira ou outra origem de saldo financeiro.                              |
+| Cartão          | Cartão de crédito utilizado para registrar compras e controlar faturas.                    |
+| Meta Financeira | Objetivo financeiro definido pelo usuário, como economizar ou investir determinado valor.  |
+| Dashboard       | Painel inicial com indicadores, gráficos e resumo da situação financeira.                  |
+| Relatório       | Documento ou visualização que apresenta informações financeiras consolidadas para análise. |
+
+## 2. Requisitos Funcionais
+
+### RF01 – Cadastro de Usuários
 
 **Descrição**
 
-O sistema deve permitir que um visitante realize seu cadastro informando nome, e-mail e senha.
+O sistema deverá permitir que novos usuários realizem seu cadastro para utilizar o FinanceHub.
 
-**Ator**
+**Entradas**
 
-Visitante
+* Nome completo
+* E-mail
+* Senha
+* Confirmação da senha
+
+**Regras**
+
+* O e-mail deverá ser único.
+* A senha deverá atender aos critérios mínimos de segurança.
+* A confirmação da senha deverá ser igual à senha informada.
+
+**Saídas**
+
+* Cadastro realizado com sucesso.
+* Mensagem de erro caso exista alguma inconsistência nos dados informados.
 
 **Prioridade**
 
 Alta
 
-**Dependências**
-
-Nenhuma
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
 ---
 
-### RF002 - Login
+### RF02 – Autenticação de Usuários
 
 **Descrição**
 
-O sistema deve permitir que o usuário realize login utilizando e-mail e senha.
+O sistema deverá permitir que usuários cadastrados realizem login para acessar suas informações financeiras.
 
-**Ator**
+**Entradas**
 
-Usuário
+* E-mail
+* Senha
+
+**Regras**
+
+* Apenas usuários cadastrados poderão acessar o sistema.
+* As credenciais deverão ser validadas antes da autenticação.
+* O acesso às funcionalidades protegidas exigirá autenticação.
+
+**Saídas**
+
+* Login realizado com sucesso.
+* Mensagem de erro para credenciais inválidas.
+* Encerramento da sessão por meio da funcionalidade de logout.
 
 **Prioridade**
 
 Alta
 
-**Dependências**
-
-RF001
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
 ---
 
-### RF003 - Logout
+### RF03 – Dashboard Financeiro
 
 **Descrição**
 
-O sistema deve permitir que o usuário encerre sua sessão.
+O sistema deverá apresentar um painel inicial com um resumo da situação financeira do usuário.
 
-**Ator**
+**Informações exibidas**
 
-Usuário
+* Saldo total.
+* Total de receitas.
+* Total de despesas.
+* Saldo do mês.
+* Últimas movimentações.
+* Gráficos financeiros.
+* Resumo por categorias.
+
+**Regras**
+
+* As informações deverão considerar apenas os dados do usuário autenticado.
+* Os valores deverão ser atualizados automaticamente após qualquer movimentação financeira.
 
 **Prioridade**
 
 Alta
-
-**Dependências**
-
-RF002
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-## Módulo: Contas
-
-### RF004 - Cadastrar Conta
-
-**Descrição**
-
-O sistema deve permitir cadastrar contas financeiras.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF002
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-### RF005 - Editar Conta
-
-**Descrição**
-
-O sistema deve permitir editar contas cadastradas.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF004
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-### RF006 - Excluir Conta
-
-**Descrição**
-
-O sistema deve permitir excluir contas sem movimentações associadas.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Média
-
-**Dependências**
-
-RF004
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-## Módulo: Categorias
-
-### RF007 - Cadastrar Categoria
-
-**Descrição**
-
-O sistema deve permitir criar categorias para organizar movimentações financeiras.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF002
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-## Módulo: Movimentações Financeiras
-
-### RF008 - Registrar Movimentação Financeira
-
-**Descrição**
-
-O sistema deve permitir registrar movimentações do tipo Receita, Despesa e Transferência.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF004 e RF007
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-### RF009 - Editar Movimentação Financeira
-
-**Descrição**
-
-O sistema deve permitir editar movimentações financeiras.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF008
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-### RF010 - Excluir Movimentação Financeira
-
-**Descrição**
-
-O sistema deve permitir excluir movimentações financeiras.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Média
-
-**Dependências**
-
-RF008
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-## Módulo: Dashboard
-
-### RF011 - Visualizar Dashboard
-
-**Descrição**
-
-O sistema deve apresentar um painel contendo saldo, receitas, despesas, gráficos e indicadores financeiros.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Alta
-
-**Dependências**
-
-RF008
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-## Módulo: Relatórios
-
-### RF012 - Relatório por Categoria
-
-**Descrição**
-
-O sistema deve permitir visualizar movimentações agrupadas por categoria.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Média
-
-**Dependências**
-
-RF008
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-### RF013 - Relatório Mensal
-
-**Descrição**
-
-O sistema deve permitir visualizar relatórios mensais de receitas e despesas.
-
-**Ator**
-
-Usuário
-
-**Prioridade**
-
-Média
-
-**Dependências**
-
-RF008
-
-**Status**
-
-Planejado
-
-**Versão**
-
-v0.1.0
-
----
-
-# Requisitos Não Funcionais
-
-### RNF001
-
-O sistema deverá possuir interface responsiva.
-
----
-
-### RNF002
-
-As senhas deverão ser armazenadas utilizando criptografia.
-
----
-
-### RNF003
-
-O backend deverá ser desenvolvido utilizando Java e Spring Boot.
-
----
-
-### RNF004
-
-O banco de dados será PostgreSQL.
-
----
-
-### RNF005
-
-O sistema utilizará autenticação baseada em JWT.
-
----
-
-### RNF006
-
-O sistema deverá possuir arquitetura REST.
-
----
-
-# Fora do Escopo do MVP
-
-As funcionalidades abaixo serão implementadas em versões futuras:
-
-- Cartões de crédito.
-- Parcelamentos.
-- Metas financeiras.
-- Orçamentos.
-- Contas recorrentes.
-- Exportação de relatórios.
-- Aplicativo mobile.
-- Inteligência Artificial.
-- Integração com Open Finance.
