@@ -3,11 +3,8 @@
 ## Visão Geral
 
 O FinanceHub é uma plataforma SaaS de gestão financeira pessoal desenvolvida para ajudar pessoas a organizar sua vida financeira de forma simples, segura e inteligente.
-
 O sistema permitirá que cada usuário tenha seu próprio ambiente financeiro, onde poderá registrar receitas, despesas, contas, transferências, metas e acompanhar sua evolução financeira por meio de dashboards, gráficos e relatórios.
-
 O FinanceHub será desenvolvido utilizando uma arquitetura moderna, escalável e preparada para crescimento, permitindo futuramente a implementação de novos módulos e funcionalidades sem comprometer a estrutura do sistema.
-
 Embora o projeto tenha surgido da necessidade pessoal de organizar as finanças do desenvolvedor, ele está sendo projetado para atender qualquer pessoa que deseje ter maior controle sobre seu dinheiro.
 
 ---
@@ -40,9 +37,7 @@ Tornar-se uma plataforma completa de gestão financeira pessoal, oferecendo recu
 # Problema
 
 Muitas pessoas não possuem controle sobre seus gastos, receitas e patrimônio.
-
 Grande parte utiliza planilhas complexas ou aplicativos com funcionalidades limitadas, dificultando o acompanhamento da saúde financeira.
-
 Além disso, diversos sistemas focam apenas no registro das movimentações, deixando de fornecer informações relevantes que auxiliem o usuário a tomar decisões financeiras.
 
 ---
@@ -50,7 +45,6 @@ Além disso, diversos sistemas focam apenas no registro das movimentações, dei
 # Solução
 
 O FinanceHub será uma plataforma que centraliza todas as informações financeiras do usuário em um único ambiente.
-
 Além do controle financeiro tradicional, o sistema oferecerá indicadores, gráficos, metas e análises que auxiliem o usuário a compreender melhor sua situação financeira.
 
 ---
@@ -75,7 +69,6 @@ Exemplos:
 # Diferenciais
 
 O FinanceHub não será apenas um sistema para registrar receitas e despesas.
-
 Seus principais diferenciais serão:
 
 - Dashboard inteligente com indicadores financeiros.
@@ -134,7 +127,6 @@ Evoluir o sistema para uma plataforma SaaS completa, incluindo:
 # Escopo Inicial
 
 O projeto será desenvolvido inicialmente como uma aplicação web responsiva utilizando Java, Spring Boot, PostgreSQL e JavaScript.
-
 A arquitetura será modular, permitindo crescimento contínuo conforme novas funcionalidades forem implementadas.
 
 ---
