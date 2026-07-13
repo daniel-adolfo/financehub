@@ -3,25 +3,28 @@
 ## Visão Geral
 
 O FinanceHub é uma plataforma SaaS de gestão financeira pessoal desenvolvida para ajudar pessoas a organizar sua vida financeira de forma simples, segura e inteligente.
-O sistema permitirá que cada usuário tenha seu próprio ambiente financeiro, onde poderá registrar receitas, despesas, contas, transferências, metas e acompanhar sua evolução financeira por meio de dashboards, gráficos e relatórios.
-O FinanceHub será desenvolvido utilizando uma arquitetura moderna, escalável e preparada para crescimento, permitindo futuramente a implementação de novos módulos e funcionalidades sem comprometer a estrutura do sistema.
-Embora o projeto tenha surgido da necessidade pessoal de organizar as finanças do desenvolvedor, ele está sendo projetado para atender qualquer pessoa que deseje ter maior controle sobre seu dinheiro.
+
+A plataforma permitirá que cada usuário possua seu próprio ambiente financeiro, onde poderá registrar receitas, despesas, transferências, contas, metas e acompanhar sua evolução financeira por meio de dashboards, gráficos e relatórios.
+
+Embora o projeto tenha surgido da necessidade pessoal do desenvolvedor em organizar suas finanças, sua arquitetura está sendo planejada desde o início para atender qualquer pessoa interessada em controlar melhor sua vida financeira.
+
+O sistema será desenvolvido utilizando uma arquitetura moderna, escalável e modular, permitindo a evolução contínua do produto sem comprometer sua estrutura.
 
 ---
 
-# Missão
+## Missão
 
-Facilitar o controle financeiro das pessoas através de uma plataforma intuitiva, segura e eficiente, transformando dados financeiros em informações úteis para a tomada de decisões.
+Facilitar o controle financeiro das pessoas por meio de uma plataforma intuitiva, segura e eficiente, transformando dados financeiros em informações que auxiliem na tomada de decisões.
 
 ---
 
-# Visão
+## Visão
 
 Tornar-se uma plataforma completa de gestão financeira pessoal, oferecendo recursos que auxiliem usuários na organização financeira, planejamento de objetivos e construção de uma vida financeira mais saudável.
 
 ---
 
-# Valores
+## Valores
 
 - Simplicidade
 - Segurança
@@ -34,22 +37,25 @@ Tornar-se uma plataforma completa de gestão financeira pessoal, oferecendo recu
 
 ---
 
-# Problema
+## Problema
 
-Muitas pessoas não possuem controle sobre seus gastos, receitas e patrimônio.
-Grande parte utiliza planilhas complexas ou aplicativos com funcionalidades limitadas, dificultando o acompanhamento da saúde financeira.
-Além disso, diversos sistemas focam apenas no registro das movimentações, deixando de fornecer informações relevantes que auxiliem o usuário a tomar decisões financeiras.
+Muitas pessoas possuem dificuldade para controlar receitas, despesas e patrimônio.
 
----
+Grande parte utiliza planilhas complexas ou aplicativos limitados, dificultando a visualização da real situação financeira.
 
-# solução
-
-O FinanceHub será uma plataforma que centraliza todas as informações financeiras do usuário em um único ambiente.
-Além do controle financeiro tradicional, o sistema oferecerá indicadores, gráficos, metas e análises que auxiliem o usuário a compreender melhor sua situação financeira.
+Além disso, diversos sistemas registram apenas movimentações, sem fornecer informações que auxiliem o usuário na tomada de decisões.
 
 ---
 
-# Público-alvo
+## Solução
+
+O FinanceHub centralizará todas as informações financeiras do usuário em um único ambiente.
+
+Além do controle financeiro tradicional, a plataforma oferecerá indicadores, gráficos, metas e análises capazes de fornecer uma visão clara da saúde financeira do usuário.
+
+---
+
+## Público-alvo
 
 O FinanceHub foi projetado para atender qualquer pessoa que deseje organizar sua vida financeira.
 
@@ -66,41 +72,33 @@ Exemplos:
 
 ---
 
-# Diferenciais
-
-O FinanceHub não será apenas um sistema para registrar receitas e despesas.
-Seus principais diferenciais serão:
+## Diferenciais
 
 - Dashboard inteligente com indicadores financeiros.
-- Organização financeira por contas.
+- Organização financeira baseada em contas.
 - Categorias totalmente personalizáveis.
-- Sistema preparado para múltiplos usuários.
-- Arquitetura escalável.
-- Interface simples e intuitiva.
+- Arquitetura preparada para múltiplos usuários.
+- Interface simples, intuitiva e responsiva.
 - Estrutura preparada para evolução contínua.
 
 ---
 
-# Objetivos
+## Objetivos
 
-## Curto prazo
+### Curto prazo
 
-Desenvolver um MVP funcional contendo:
+Desenvolver um MVP contendo:
 
 - Cadastro de usuários
 - Autenticação
-- Contas
-- Receitas
-- Despesas
-- Transferências
+- Contas financeiras
+- Movimentações financeiras
 - Dashboard
 - Relatórios básicos
 
----
+### Médio prazo
 
-## Médio prazo
-
-Adicionar funcionalidades como:
+Adicionar:
 
 - Cartões de crédito
 - Parcelamentos
@@ -109,28 +107,27 @@ Adicionar funcionalidades como:
 - Orçamentos
 - Notificações
 
----
+### Longo prazo
 
-## Longo prazo
-
-Evoluir o sistema para uma plataforma SaaS completa, incluindo:
+Evoluir a plataforma com:
 
 - Aplicativo mobile
 - Compartilhamento financeiro
 - Espaços familiares
 - Planos Premium
 - Inteligência artificial para análises financeiras
-- Integração com Open Finance (quando fizer sentido)
+- Integração com Open Finance (quando aplicável)
 
 ---
 
-# Escopo Inicial
+## Escopo Inicial
 
-O projeto será desenvolvido inicialmente como uma aplicação web responsiva utilizando Java, Spring Boot, PostgreSQL e JavaScript.
-A arquitetura será modular, permitindo crescimento contínuo conforme novas funcionalidades forem implementadas.
+A primeira versão será desenvolvida como uma aplicação web responsiva utilizando Java, Spring Boot, PostgreSQL e JavaScript.
+
+Toda a arquitetura será construída de forma modular para facilitar futuras expansões.
 
 ---
 
-# Status do Projeto
+## Status do Projeto
 
-Em fase de planejamento e documentação.
+🚧 Em fase de planejamento e documentação.
