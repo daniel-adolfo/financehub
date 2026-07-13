@@ -42,7 +42,7 @@ Além disso, diversos sistemas focam apenas no registro das movimentações, dei
 
 ---
 
-# Solução
+# solução
 
 O FinanceHub será uma plataforma que centraliza todas as informações financeiras do usuário em um único ambiente.
 Além do controle financeiro tradicional, o sistema oferecerá indicadores, gráficos, metas e análises que auxiliem o usuário a compreender melhor sua situação financeira.
